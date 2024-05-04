@@ -22,5 +22,4 @@ process.on('unhandledRejection', (ex) => {
 // })
 app.use(express.static(path))
 let port  = process.env.PORT || 3000;
-const server = app.listen(port, () => console.log(`App listen at ${port}`));
-module.exports = server;
+app.listen(port, () => console.log(`App listen at ${port}`));
